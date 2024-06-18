@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermarking Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('Encrypt.jpg');
+            background-size: 1800px;
+            background-position: center center;
+        }
+        
+        header {
+            background-color: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            ;
+            ;
+            color: #ffffff;
+            padding: 5px 0;
+            border-radius: 5px;
+            border: ridge;
+            text-align: center;
+            width: 100%;
+        }
+        
+        nav {
+            display: flow-root;
+            justify-content: center;
+            background-color: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            ;
+            border: ridge;
+            border-radius: 45px;
+            box-shadow: #00d415;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            list-style-type: circle;
+        }
+        
+        #container {
+            background-color: gradient-1 linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            padding: 30px;
+            border: 3px ridge;
+            box-shadow: 0 0 20px rgba(249, 245, 245, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        input,
+        textarea,
+        select {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 3px solid #C0C0C0;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 15px;
+            background-color: #E19F65;
+            color: #0b1114;
+            border: ridge;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #f4ebeb;
+        }
+        
+        h2 {
+            color: #C0C0C0;
+        }
+        
+        label {
+            color: #C0C0C0;
+        }
+        
+        input[type="file"] {
+            color: #C0C0C0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>InvoMark</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index1.html">Encrypt Image</a>
+        <a href="decrypt.html">Decrypt Image</a>
+
+    </nav>
+
+    <div id="container">
+        <h2>Encrypt Image</h2>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <label for="imageInput">Select Original Image:</label>
+            <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" required>
+
+            <label for="watermarkText">Enter Text to be Watermark:</label>
+            <textarea name="watermarkText" rows="3" required></textarea>
+
+            <label for="encryptionTechnique">Select Encryption Technique:</label>
+            <select name="encryptionTechnique" required>
+                
+                <option value="md5">MD5 Encryption</option>
+                <option value="sha256">SHA256 Encryption</option>
+                <option value="base64">Base64 Encryption</option>
+                
+                
+            </select>
+            <button type="submit">Encode</button>
+        </form>
+    </div>
+
+    <div id="about" style="display: none; padding: 20px;">
+        <h2>About Us</h2>
+        <p>This is a placeholder for information about our image watermarking tool.</p>
+    </div>
+
+    <div id="contact" style="display: none; padding: 20px;">
+        <h2>Contact</h2>
+        <p>This is a placeholder for contact information.</p>
+    </div>
+
+
+</body>
+
+</html>

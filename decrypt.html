@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermarking Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('Decrypt.jpg');
+            background-size: 1500px;
+            background-position: right;
+        }
+        
+        header {
+            background-color: gradient-1li near-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            color: #ffffff;
+            padding: 5px 0;
+            border-radius: 5px;
+            border: ridge;
+            text-align: center;
+            width: 100%;
+        }
+        
+        nav {
+            display: flow-root;
+            justify-content: center;
+            background-color: gradient-1 linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            border: ridge;
+            border-radius: 25px;
+            box-shadow: #1e00a4;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        #container {
+            background-color: gradient-1 linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+            padding: 30px;
+            border: 3px solid;
+            border-color: hsla(199, 69%, 84%, 1);
+            box-shadow: 0 0 20px rgba(186, 186, 12, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        input,
+        textarea,
+        select {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 3px solid hsla(216, 33%, 68%, 1);
+            ;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 15px;
+            background-color: hsla(199, 69%, 84%, 1);
+            color: #030405;
+            border: ridge;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: hsla(199, 89%, 49%, 1);
+            ;
+        }
+        
+        h2 {
+            color: hsla(199, 69%, 84%, 1);
+        }
+        
+        label {
+            color: hsla(199, 69%, 84%, 1);
+        }
+        
+        input[type="file"] {
+            color: hsla(199, 69%, 84%, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>InvoMark</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index1.html">Encrypt Image</a>
+        <a href="decrypt.html">Decrypt Image</a>
+
+    </nav>
+
+    <div id="container">
+        <h2>Decrypt Image</h2>
+        <form action="dsubmit.php" method="post" enctype="multipart/form-data">
+            <label for="imageInput">Select Encrypted Image:</label>
+            <input type="file" name="fileToUpload" id="fileToUpload" accept=".png" required>
+
+            <label for="watermarkText">Enter Hidden Watermark:</label>
+            <textarea name="watermarkText" rows="3" required></textarea>
+
+            <label for="encryptionTechnique">Select Encrypted Technique:</label>
+            <select name="encryptionTechnique" required>
+                
+                <option value="md5">MD5 Encryption</option>
+                <option value="sha256">SHA256 Encryption</option>
+                <option value="base64">Base64 Encryption</option>
+                
+                
+            </select>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
