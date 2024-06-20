@@ -1,0 +1,5 @@
+1. open command propmt at this location
+
+2. For this type cmd on the file location bar
+
+3. on command prompt type python app.py
